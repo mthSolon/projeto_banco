@@ -1,0 +1,67 @@
+package model;
+
+import java.util.Date;
+
+public class ConsultaMedica extends GenericModel {
+	private Date dt_consulta;
+	private String nm_atendimento;
+	private Paciente paciente_id;
+	private Medico medico_id;
+
+	public ConsultaMedica(Date dt_consulta, String nm_atendimento, Paciente paciente_id, Medico medico_id) {
+		this.dt_consulta = dt_consulta;
+		this.nm_atendimento = nm_atendimento;
+		this.paciente_id = paciente_id;
+		this.medico_id = medico_id;
+	}
+
+	public ConsultaMedica(Long id, Date dt_consulta, String nm_atendimento, Paciente paciente_id, Medico medico_id) {
+		this.dt_consulta = dt_consulta;
+		this.nm_atendimento = nm_atendimento;
+		this.paciente_id = paciente_id;
+		this.medico_id = medico_id;
+		super.setId(id);
+	}
+
+	public Date getDt_consulta() {
+		return dt_consulta;
+	}
+
+	public void setDt_consulta(Date dt_consulta) {
+		this.dt_consulta = dt_consulta;
+	}
+
+	public String getNm_atendimento() {
+		return nm_atendimento;
+	}
+
+	public void setNm_atendimento(String nm_atendimento) {
+		this.nm_atendimento = nm_atendimento;
+	}
+
+	public Paciente getPaciente_id() {
+		return paciente_id;
+	}
+
+	public void setPaciente_id(Paciente paciente_id) {
+		this.paciente_id = paciente_id;
+	}
+
+	public Medico getMedico_id() {
+		return medico_id;
+	}
+
+	public void setMedico_id(Medico medico_id) {
+		this.medico_id = medico_id;
+	}
+
+	@Override
+	public String toString() {
+		return "ConsultaMedica{" +
+				"dt_consulta=" + dt_consulta +
+				", nm_atendimento='" + nm_atendimento + '\'' +
+				", paciente_id=" + paciente_id +
+				", medico_id=" + medico_id +
+				'}';
+	}
+}
